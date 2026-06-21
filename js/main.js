@@ -7,10 +7,12 @@
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = lightbox.querySelector(".lightbox__img");
   const lightboxCaption = lightbox.querySelector(".lightbox__caption");
-  const galleryItems = document.querySelectorAll(".gallery__item img");
+  const lightboxPrev = lightbox.querySelector(".lightbox__prev");
+  const lightboxNext = lightbox.querySelector(".lightbox__next");
+  const galleryImages = document.querySelectorAll(".gallery img");
 
+  let currentImages = [];
   let currentIndex = 0;
-  const images = Array.from(galleryItems);
 
   /* Navigation sticky shadow */
   window.addEventListener("scroll", () => {
@@ -69,13 +71,30 @@
     revealObserver.observe(el);
   });
 
-  /* Lightbox */
-  function openLightbox(index) {
-    currentIndex = index;
-    const img = images[index];
+  /* Lightbox — navigation limitée à la galerie de la section courante */
+  function getGalleryImages(img) {
+    const gallery = img.closest(".gallery");
+    return gallery ? Array.from(gallery.querySelectorAll("img")) : [img];
+  }
+
+  function updateNavButtons() {
+    const single = currentImages.length <= 1;
+    lightboxPrev.hidden = single;
+    lightboxNext.hidden = single;
+  }
+
+  function showImageAt(index) {
+    const img = currentImages[index];
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
     lightboxCaption.textContent = img.alt;
+  }
+
+  function openLightbox(img) {
+    currentImages = getGalleryImages(img);
+    currentIndex = Math.max(0, currentImages.indexOf(img));
+    showImageAt(currentIndex);
+    updateNavButtons();
     lightbox.hidden = false;
     document.body.style.overflow = "hidden";
   }
@@ -86,19 +105,21 @@
   }
 
   function showPrev() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    openLightbox(currentIndex);
+    if (currentImages.length <= 1) return;
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImageAt(currentIndex);
   }
 
   function showNext() {
-    currentIndex = (currentIndex + 1) % images.length;
-    openLightbox(currentIndex);
+    if (currentImages.length <= 1) return;
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    showImageAt(currentIndex);
   }
 
-  galleryItems.forEach((img, i) => {
+  galleryImages.forEach((img) => {
     img.addEventListener("click", (e) => {
       e.stopPropagation();
-      openLightbox(i);
+      openLightbox(img);
     });
   });
 
