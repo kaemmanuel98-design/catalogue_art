@@ -81,7 +81,9 @@ a {
 /* ── Couverture ── */
 .cover {
   position: relative;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
@@ -94,28 +96,45 @@ a {
 .cover__bg {
   position: absolute;
   inset: 0;
-  background: url("../Première page/WhatsApp Image 2026-06-20 at 23.38.51.jpeg") center 62% / cover no-repeat;
-  transform: scale(1.02);
-  transition: transform 8s ease;
+  overflow: hidden;
 }
 
-.cover:hover .cover__bg {
-  transform: scale(1.06);
+.cover__bg-blur {
+  position: absolute;
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  object-fit: cover;
+  object-position: center center;
+  filter: blur(22px) saturate(1.08);
+  transform: scale(1.04);
+}
+
+.cover__bg-main {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .cover__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       to bottom,
-      rgba(245, 240, 232, 0.78) 0%,
-      rgba(245, 240, 232, 0.42) 22%,
-      rgba(245, 240, 232, 0.18) 45%,
-      rgba(245, 240, 232, 0.1) 62%,
-      rgba(21, 41, 32, 0.1) 82%,
-      rgba(21, 41, 32, 0.24) 100%
+      rgba(245, 240, 232, 0.68) 0%,
+      rgba(245, 240, 232, 0.22) 16%,
+      rgba(245, 240, 232, 0.04) 40%,
+      rgba(245, 240, 232, 0.03) 60%,
+      rgba(245, 240, 232, 0.1) 84%,
+      rgba(245, 240, 232, 0.24) 100%
     );
+  pointer-events: none;
 }
 
 .cover__content {
@@ -216,7 +235,7 @@ a {
   bottom: max(1rem, env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;

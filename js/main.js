@@ -25,7 +25,7 @@
   function getImageCaption(img) {
     const figure = img.closest("figure");
     const caption = figure && figure.querySelector(".artwork__caption");
-    return caption ? caption.textContent.trim() : img.alt;
+    return caption ? caption.textContent.trim() : "";
   }
 
   /* Navigation sticky shadow */
@@ -125,9 +125,11 @@
 
   function showImageAt(index) {
     const img = currentImages[index];
+    const caption = getImageCaption(img);
     lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightboxCaption.textContent = getImageCaption(img);
+    lightboxImg.alt = caption || img.alt;
+    lightboxCaption.textContent = caption;
+    lightboxCaption.hidden = !caption;
   }
 
   function openLightbox(img) {
