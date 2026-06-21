@@ -18,17 +18,13 @@
   --nav-height: 56px;
   --max-width: 1200px;
   --cover-text-shadow:
-    0 0 52px rgba(245, 240, 232, 1),
-    0 0 18px rgba(245, 240, 232, 1),
-    0 0 4px rgba(245, 240, 232, 1),
-    0 2px 10px rgba(21, 41, 32, 0.55),
-    0 1px 3px rgba(21, 41, 32, 0.75);
+    0 2px 16px rgba(21, 41, 32, 0.78),
+    0 1px 6px rgba(21, 41, 32, 0.68),
+    0 0 28px rgba(21, 41, 32, 0.42);
   --cover-title-shadow:
-    0 0 64px rgba(245, 240, 232, 1),
-    0 0 28px rgba(245, 240, 232, 1),
-    0 0 6px rgba(245, 240, 232, 1),
-    0 3px 12px rgba(21, 41, 32, 0.6),
-    0 1px 4px rgba(21, 41, 32, 0.8);
+    0 3px 22px rgba(21, 41, 32, 0.82),
+    0 1px 8px rgba(21, 41, 32, 0.72),
+    0 0 36px rgba(21, 41, 32, 0.48);
 }
 
 *, *::before, *::after {
@@ -127,12 +123,12 @@ a {
   background:
     linear-gradient(
       to bottom,
-      rgba(245, 240, 232, 0.68) 0%,
-      rgba(245, 240, 232, 0.22) 16%,
-      rgba(245, 240, 232, 0.04) 40%,
-      rgba(245, 240, 232, 0.03) 60%,
-      rgba(245, 240, 232, 0.1) 84%,
-      rgba(245, 240, 232, 0.24) 100%
+      rgba(21, 41, 32, 0.42) 0%,
+      rgba(21, 41, 32, 0.16) 20%,
+      rgba(21, 41, 32, 0.05) 45%,
+      rgba(21, 41, 32, 0.04) 62%,
+      rgba(21, 41, 32, 0.14) 84%,
+      rgba(21, 41, 32, 0.32) 100%
     );
   pointer-events: none;
 }
@@ -189,7 +185,7 @@ a {
   font-size: clamp(1rem, 4.5vw, 1.45rem);
   font-weight: 600;
   line-height: 1.25;
-  color: var(--green);
+  color: var(--white);
   background: transparent;
   padding: 0 0.5rem;
   text-shadow: var(--cover-text-shadow);
@@ -198,7 +194,7 @@ a {
 
 .cover__brand .brand-name,
 .cover__brand .brand-studio {
-  color: var(--green);
+  color: var(--white);
 }
 
 .cover__title {
@@ -207,7 +203,7 @@ a {
   font-weight: 700;
   letter-spacing: clamp(0.04em, 1.5vw, 0.1em);
   line-height: 1.08;
-  color: var(--green);
+  color: var(--white);
   background: transparent;
   padding: 0 0.35rem;
   margin: 0;
@@ -221,7 +217,7 @@ a {
   font-size: clamp(1rem, 3.8vw, 1.15rem);
   font-weight: 600;
   line-height: 1.6;
-  color: var(--green);
+  color: rgba(255, 255, 255, 0.95);
   max-width: min(100%, 22rem);
   margin: 0 auto;
   padding: 0 0.5rem;
@@ -244,12 +240,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--white);
   background: transparent;
   border: none;
   padding: 0;
   text-shadow: var(--cover-text-shadow);
-  opacity: 0.92;
+  opacity: 0.95;
   animation: fadeUp 1s ease 1s both, bounce 2s ease 2s infinite;
   transition: opacity 0.3s;
 }
