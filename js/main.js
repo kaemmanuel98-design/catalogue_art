@@ -9,7 +9,6 @@
   const lightboxCaption = lightbox.querySelector(".lightbox__caption");
   const lightboxPrev = lightbox.querySelector(".lightbox__prev");
   const lightboxNext = lightbox.querySelector(".lightbox__next");
-  const galleryImages = document.querySelectorAll(".gallery img");
 
   let currentImages = [];
   let currentIndex = 0;
@@ -116,8 +115,10 @@
     showImageAt(currentIndex);
   }
 
-  galleryImages.forEach((img) => {
-    img.addEventListener("click", (e) => {
+  document.querySelectorAll(".gallery").forEach((gallery) => {
+    gallery.addEventListener("click", (e) => {
+      const img = e.target.closest("img");
+      if (!img || !gallery.contains(img)) return;
       e.stopPropagation();
       openLightbox(img);
     });
