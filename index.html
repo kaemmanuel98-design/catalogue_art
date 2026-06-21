@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#152920">
+  <meta name="theme-color" content="#ffffff">
   <title>Catalogue artistikE studio</title>
   <meta name="description" content="Catalogue d'œuvres d'art artistikE studio. Tableaux, vases et créations artisanales.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,10 +28,11 @@
         </p>
       </div>
       <div class="cover__center">
-        <h1 class="cover__title">Catalogue</h1>
+        <h1 class="cover__title">Collection</h1>
+        <p class="cover__lead">Créations artisanales uniques. Explorez matières, textures et finitions.</p>
       </div>
     </div>
-    <a href="#collections" class="cover__scroll" aria-label="Découvrir le catalogue">
+    <a href="#discover" class="cover__scroll" aria-label="Découvrir la collection">
       <span>Découvrir</span>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
@@ -42,10 +43,12 @@
     <div class="nav__inner">
       <a href="#accueil" class="nav__brand"><span class="brand-name">artistikE</span> <span class="brand-studio">studio</span></a>
       <ul class="nav__links">
-        <li><a href="#tableau-moderne">Tableau moderne plâtré</a></li>
-        <li><a href="#tableau-cordage">Tableau texturé à cordage</a></li>
-        <li><a href="#vase-papier">Vase Papier mâché</a></li>
-        <li><a href="#vases-cordages">Vases à cordages épurées</a></li>
+        <li><a href="#discover">Découvrir</a></li>
+        <li><a href="#collections">Œuvres</a></li>
+        <li><a href="#tableau-moderne">Tableau plâtré</a></li>
+        <li><a href="#tableau-cordage">Tableau cordage</a></li>
+        <li><a href="#vase-papier">Papier mâché</a></li>
+        <li><a href="#vases-cordages">Vases cordages</a></li>
       </ul>
       <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -53,7 +56,55 @@
     </div>
   </nav>
 
-  <main id="collections">
+  <!-- Découvrir (inspiré Rijksstudio) -->
+  <section class="discover" id="discover">
+    <div class="discover__inner">
+      <header class="section-head">
+        <h2 class="section-head__title">Découvrir</h2>
+        <p class="section-head__lead">Parcourez les quatre univers de la collection</p>
+      </header>
+      <div class="discover__wrap">
+        <button type="button" class="discover__arrow discover__arrow--prev" aria-label="Collections précédentes" hidden>&#8249;</button>
+        <div class="discover__track" id="discoverTrack">
+          <a class="discover-card" href="#tableau-moderne">
+            <div class="discover-card__image">
+              <img src="Tableau moderne plâtré/6F8BE055-81F5-4747-85A1-B3F998E6CBC9.png" alt="" loading="lazy">
+            </div>
+            <h3 class="discover-card__title">Tableau moderne plâtré</h3>
+            <p class="discover-card__meta">4 œuvres</p>
+          </a>
+          <a class="discover-card" href="#tableau-cordage">
+            <div class="discover-card__image">
+              <img src="tableau texturé à cordage minitieux/3BD30EFA-CD1D-4490-8866-9111D0B317EE (1).png" alt="" loading="lazy">
+            </div>
+            <h3 class="discover-card__title">Tableau texturé à cordage minitieux</h3>
+            <p class="discover-card__meta">6 œuvres</p>
+          </a>
+          <a class="discover-card" href="#vase-papier">
+            <div class="discover-card__image">
+              <img src="Vase Papier mâché/647091F4-E421-416E-8AF6-7940197B3595.png" alt="" loading="lazy">
+            </div>
+            <h3 class="discover-card__title">Vase Papier mâché</h3>
+            <p class="discover-card__meta">3 œuvres</p>
+          </a>
+          <a class="discover-card" href="#vases-cordages">
+            <div class="discover-card__image">
+              <img src="Vases à cordages épurées/118200C2-E527-4C5B-84C6-0F764AAE17EC.png" alt="" loading="lazy">
+            </div>
+            <h3 class="discover-card__title">Vases à cordages épurées</h3>
+            <p class="discover-card__meta">5 œuvres</p>
+          </a>
+        </div>
+        <button type="button" class="discover__arrow discover__arrow--next" aria-label="Collections suivantes" hidden>&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="artworks" id="collections">
+    <header class="section-head section-head--center">
+      <h2 class="section-head__title">Œuvres</h2>
+      <p class="section-head__lead">Toutes les pièces du catalogue</p>
+    </header>
 
     <!-- Section 1 -->
     <section class="collection" id="tableau-moderne">
@@ -61,32 +112,41 @@
         <h2 class="collection__title">Tableau moderne plâtré</h2>
       </div>
       <div class="gallery">
-        <figure class="gallery__item">
-          <img src="Tableau moderne plâtré/6F8BE055-81F5-4747-85A1-B3F998E6CBC9.png" alt="Tableau moderne plâtré" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Tableau moderne plâtré/6F8BE055-81F5-4747-85A1-B3F998E6CBC9.png" alt="Tableau moderne plâtré" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau moderne plâtré</figcaption>
         </figure>
-        <figure class="gallery__item gallery__item--card">
-          <div class="gallery__media gallery__media--wide">
+        <figure class="gallery__item gallery__item--card artwork">
+          <div class="gallery__media gallery__media--wide artwork__frame">
             <img src="Tableau moderne plâtré/8B0FA198-4F86-40EE-B3BC-7F2C5E5F2FAC.png" alt="Tableau sculptural Erosion" loading="lazy">
           </div>
-          <figcaption class="collection__text collection__text--after-image">
-            <p class="collection__subtitle">Erosion, tableau sculptural</p>
+          <figcaption class="artwork__caption">Erosion, tableau sculptural</figcaption>
+          <div class="collection__text collection__text--after-image">
             <p class="collection__tagline">La rencontre entre l’art et la matière</p>
             <p>Façonné à la main en plâtre sculpté, sublimé par une finition effet bronze vieilli. Ses reliefs profonds et organiques captent la lumière et créent un jeu de reflets chaleureux.</p>
             <p>Véritable sculpture murale, il habille l’espace avec élégance en chambre, salon ou bureau. Chaque pièce est unique.</p>
             <p><strong>Valeur ajoutée :</strong> artisanat, relief et finition haut de gamme pour un intérieur sophistiqué et original.</p>
-          </figcaption>
+          </div>
         </figure>
-        <figure class="gallery__item">
-          <img src="Tableau moderne plâtré/IMG_4622.jpg" alt="Tableau moderne plâtré" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Tableau moderne plâtré/IMG_4622.jpg" alt="Tableau moderne plâtré" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau moderne plâtré</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Tableau moderne plâtré/IMG_4826.PNG" alt="Tableau moderne plâtré" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Tableau moderne plâtré/IMG_4826.PNG" alt="Tableau moderne plâtré" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau moderne plâtré</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- Section 2 -->
-    <section class="collection" id="tableau-cordage">
+    <section class="collection collection--alt" id="tableau-cordage">
       <div class="collection__header">
         <h2 class="collection__title">Tableau texturé à cordage minitieux</h2>
         <p class="collection__tagline">Élégance organique et chaleur contemporaine</p>
@@ -96,23 +156,41 @@
         </div>
       </div>
       <div class="gallery">
-        <figure class="gallery__item">
-          <img src="tableau texturé à cordage minitieux/3BD30EFA-CD1D-4490-8866-9111D0B317EE (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/3BD30EFA-CD1D-4490-8866-9111D0B317EE (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
-        <figure class="gallery__item gallery__item--tall">
-          <img src="tableau texturé à cordage minitieux/3D34C4D5-B397-40AB-8772-42122AD7A8D0 (1).jpg" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item gallery__item--tall artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/3D34C4D5-B397-40AB-8772-42122AD7A8D0 (1).jpg" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="tableau texturé à cordage minitieux/723D560A-B2B3-457E-82FD-58B054C51243 (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/723D560A-B2B3-457E-82FD-58B054C51243 (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="tableau texturé à cordage minitieux/8B90B959-112A-4EB5-AB6F-76EBFCAD382E (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/8B90B959-112A-4EB5-AB6F-76EBFCAD382E (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
-        <figure class="gallery__item gallery__item--wide">
-          <img src="tableau texturé à cordage minitieux/9384644F-1A0B-42DF-BD01-B64262771401 (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item gallery__item--wide artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/9384644F-1A0B-42DF-BD01-B64262771401 (1).png" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="tableau texturé à cordage minitieux/IMG_6687 (1).PNG" alt="Tableau texturé à cordage minitieux" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="tableau texturé à cordage minitieux/IMG_6687 (1).PNG" alt="Tableau texturé à cordage minitieux" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Tableau texturé à cordage minitieux</figcaption>
         </figure>
       </div>
     </section>
@@ -128,20 +206,29 @@
         </div>
       </div>
       <div class="gallery gallery--three">
-        <figure class="gallery__item">
-          <img src="Vase Papier mâché/647091F4-E421-416E-8AF6-7940197B3595.png" alt="Vase Papier mâché" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vase Papier mâché/647091F4-E421-416E-8AF6-7940197B3595.png" alt="Vase Papier mâché" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vase Papier mâché</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Vase Papier mâché/9E22B408-5C0F-4468-A452-069BFCC3CD46.png" alt="Vase Papier mâché" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vase Papier mâché/9E22B408-5C0F-4468-A452-069BFCC3CD46.png" alt="Vase Papier mâché" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vase Papier mâché</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Vase Papier mâché/E834F78F-2AAC-40BB-B36A-CC9CD9E8FD5D.png" alt="Vase Papier mâché" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vase Papier mâché/E834F78F-2AAC-40BB-B36A-CC9CD9E8FD5D.png" alt="Vase Papier mâché" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vase Papier mâché</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- Section 4 -->
-    <section class="collection" id="vases-cordages">
+    <section class="collection collection--alt" id="vases-cordages">
       <div class="collection__header">
         <h2 class="collection__title">Vases à cordages épurées</h2>
         <p class="collection__tagline">L’élégance de la matière, la poésie du détail</p>
@@ -152,25 +239,39 @@
         </div>
       </div>
       <div class="gallery">
-        <figure class="gallery__item">
-          <img src="Vases à cordages épurées/118200C2-E527-4C5B-84C6-0F764AAE17EC.png" alt="Vases à cordages épurées" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vases à cordages épurées/118200C2-E527-4C5B-84C6-0F764AAE17EC.png" alt="Vases à cordages épurées" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vases à cordages épurées</figcaption>
         </figure>
-        <figure class="gallery__item gallery__item--tall">
-          <img src="Vases à cordages épurées/7051566B-36E3-4881-94A7-B21C76A7844B.png" alt="Vases à cordages épurées" loading="lazy">
+        <figure class="gallery__item gallery__item--tall artwork">
+          <div class="artwork__frame">
+            <img src="Vases à cordages épurées/7051566B-36E3-4881-94A7-B21C76A7844B.png" alt="Vases à cordages épurées" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vases à cordages épurées</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Vases à cordages épurées/949EC8F4-6151-4353-8AC2-B952C31C1329.png" alt="Vases à cordages épurées" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vases à cordages épurées/949EC8F4-6151-4353-8AC2-B952C31C1329.png" alt="Vases à cordages épurées" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vases à cordages épurées</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Vases à cordages épurées/IMG_3145.jpg" alt="Vases à cordages épurées" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vases à cordages épurées/IMG_3145.jpg" alt="Vases à cordages épurées" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vases à cordages épurées</figcaption>
         </figure>
-        <figure class="gallery__item">
-          <img src="Vases à cordages épurées/IMG_4704.JPG" alt="Vases à cordages épurées" loading="lazy">
+        <figure class="gallery__item artwork">
+          <div class="artwork__frame">
+            <img src="Vases à cordages épurées/IMG_4704.JPG" alt="Vases à cordages épurées" loading="lazy">
+          </div>
+          <figcaption class="artwork__caption">Vases à cordages épurées</figcaption>
         </figure>
       </div>
     </section>
-
-  </main>
+  </div>
 
   <footer class="footer">
     <p class="footer__brand"><span class="brand-name">artistikE</span> <span class="brand-studio">studio</span></p>
