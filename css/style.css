@@ -354,6 +354,42 @@ a {
   transition: transform 0.3s, opacity 0.3s;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.lang-switch__btn {
+  min-width: 2.35rem;
+  min-height: 2rem;
+  padding: 0.2rem 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.lang-switch__btn:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.lang-switch__btn.is-active {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+
 /* ── Sections (Rijksstudio) ── */
 .section-head {
   max-width: var(--max-width);
@@ -993,6 +1029,10 @@ a {
     font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
     white-space: nowrap;
+  }
+
+  .lang-switch {
+    margin-left: 0;
   }
 
   .gallery {

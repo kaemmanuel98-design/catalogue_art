@@ -182,4 +182,13 @@
     if (e.key === "ArrowLeft") showPrev();
     if (e.key === "ArrowRight") showNext();
   });
+
+  if (window.ArtistikeI18n) {
+    ArtistikeI18n.initI18n();
+    document.addEventListener("languagechange", () => {
+      if (!lightbox.hidden && currentImages[currentIndex]) {
+        showImageAt(currentIndex);
+      }
+    });
+  }
 })();

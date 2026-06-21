@@ -31,12 +31,12 @@
         </p>
       </div>
       <div class="cover__center">
-        <h1 class="cover__title">Collection</h1>
-        <p class="cover__lead">Créations artisanales uniques. Explorez matières, textures et finitions.</p>
+        <h1 class="cover__title" data-i18n="cover.title">Collection</h1>
+        <p class="cover__lead" data-i18n="cover.lead">Créations artisanales uniques. Explorez matières, textures et finitions.</p>
       </div>
     </div>
-    <a href="#discover" class="cover__scroll" aria-label="Découvrir la collection">
-      <span>Découvrir</span>
+    <a href="#discover" class="cover__scroll" data-i18n-aria="cover.discoverAria">
+      <span data-i18n="cover.discover">Découvrir</span>
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
   </header>
@@ -46,14 +46,18 @@
     <div class="nav__inner">
       <a href="#accueil" class="nav__brand"><span class="brand-name">artistikE</span> <span class="brand-studio">studio</span></a>
       <ul class="nav__links">
-        <li><a href="#discover">Découvrir</a></li>
-        <li><a href="#collections">Œuvres</a></li>
-        <li><a href="#tableau-moderne">Tableau plâtré</a></li>
-        <li><a href="#tableau-cordage">Tableau cordage</a></li>
-        <li><a href="#vase-papier">Papier mâché</a></li>
-        <li><a href="#vases-cordages">Vases cordages</a></li>
+        <li><a href="#discover" data-i18n="nav.discover">Découvrir</a></li>
+        <li><a href="#collections" data-i18n="nav.artworks">Œuvres</a></li>
+        <li><a href="#tableau-moderne" data-i18n="nav.plaster">Tableau plâtré</a></li>
+        <li><a href="#tableau-cordage" data-i18n="nav.rope">Tableau cordage</a></li>
+        <li><a href="#vase-papier" data-i18n="nav.papier">Papier mâché</a></li>
+        <li><a href="#vases-cordages" data-i18n="nav.vases">Vases cordages</a></li>
       </ul>
-      <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button type="button" class="lang-switch__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav__toggle" aria-label="Menu" data-i18n-aria="nav.menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -63,56 +67,56 @@
   <section class="discover" id="discover">
     <div class="discover__inner">
       <header class="section-head">
-        <h2 class="section-head__title">Découvrir</h2>
-        <p class="section-head__lead">Parcourez les quatre univers de la collection</p>
+        <h2 class="section-head__title" data-i18n="discover.title">Découvrir</h2>
+        <p class="section-head__lead" data-i18n="discover.lead">Parcourez les quatre univers de la collection</p>
       </header>
       <div class="discover__wrap">
-        <button type="button" class="discover__arrow discover__arrow--prev" aria-label="Collections précédentes" hidden>&#8249;</button>
+        <button type="button" class="discover__arrow discover__arrow--prev" data-i18n-aria="discover.prev" hidden>&#8249;</button>
         <div class="discover__track" id="discoverTrack">
           <a class="discover-card" href="#tableau-moderne">
             <div class="discover-card__image">
               <img src="Tableau moderne plâtré/6F8BE055-81F5-4747-85A1-B3F998E6CBC9.png" alt="" loading="lazy">
             </div>
-            <h3 class="discover-card__title">Tableau moderne plâtré</h3>
-            <p class="discover-card__meta">4 œuvres</p>
+            <h3 class="discover-card__title" data-i18n="collection.tableau-moderne.title">Tableau moderne plâtré</h3>
+            <p class="discover-card__meta" data-i18n-pieces="4">4 œuvres</p>
           </a>
           <a class="discover-card" href="#tableau-cordage">
             <div class="discover-card__image">
               <img src="tableau texturé à cordage minitieux/3BD30EFA-CD1D-4490-8866-9111D0B317EE (1).png" alt="" loading="lazy">
             </div>
-            <h3 class="discover-card__title">Tableau texturé à cordage minitieux</h3>
-            <p class="discover-card__meta">6 œuvres</p>
+            <h3 class="discover-card__title" data-i18n="collection.tableau-cordage.title">Tableau texturé à cordage minitieux</h3>
+            <p class="discover-card__meta" data-i18n-pieces="6">6 œuvres</p>
           </a>
           <a class="discover-card" href="#vase-papier">
             <div class="discover-card__image">
               <img src="Vase Papier mâché/647091F4-E421-416E-8AF6-7940197B3595.png" alt="" loading="lazy">
             </div>
-            <h3 class="discover-card__title">Vase Papier mâché</h3>
-            <p class="discover-card__meta">3 œuvres</p>
+            <h3 class="discover-card__title" data-i18n="collection.vase-papier.title">Vase Papier mâché</h3>
+            <p class="discover-card__meta" data-i18n-pieces="3">3 œuvres</p>
           </a>
           <a class="discover-card" href="#vases-cordages">
             <div class="discover-card__image">
               <img src="Vases à cordages épurées/118200C2-E527-4C5B-84C6-0F764AAE17EC.png" alt="" loading="lazy">
             </div>
-            <h3 class="discover-card__title">Vases à cordages épurées</h3>
-            <p class="discover-card__meta">5 œuvres</p>
+            <h3 class="discover-card__title" data-i18n="collection.vases-cordages.title">Vases à cordages épurées</h3>
+            <p class="discover-card__meta" data-i18n-pieces="5">5 œuvres</p>
           </a>
         </div>
-        <button type="button" class="discover__arrow discover__arrow--next" aria-label="Collections suivantes" hidden>&#8250;</button>
+        <button type="button" class="discover__arrow discover__arrow--next" data-i18n-aria="discover.next" hidden>&#8250;</button>
       </div>
     </div>
   </section>
 
   <div class="artworks" id="collections">
     <header class="section-head section-head--center">
-      <h2 class="section-head__title">Œuvres</h2>
-      <p class="section-head__lead">Toutes les pièces du catalogue</p>
+      <h2 class="section-head__title" data-i18n="artworks.title">Œuvres</h2>
+      <p class="section-head__lead" data-i18n="artworks.lead">Toutes les pièces du catalogue</p>
     </header>
 
     <!-- Section 1 -->
     <section class="collection" id="tableau-moderne">
       <div class="collection__header">
-        <h2 class="collection__title">Tableau moderne plâtré</h2>
+        <h2 class="collection__title" data-i18n="collection.tableau-moderne.title">Tableau moderne plâtré</h2>
       </div>
       <div class="gallery">
         <figure class="gallery__item artwork">
@@ -122,14 +126,14 @@
         </figure>
         <figure class="gallery__item gallery__item--card artwork">
           <div class="gallery__media gallery__media--wide artwork__frame">
-            <img src="Tableau moderne plâtré/8B0FA198-4F86-40EE-B3BC-7F2C5E5F2FAC.png" alt="Erosion - tableau sculptural" loading="lazy">
+            <img src="Tableau moderne plâtré/8B0FA198-4F86-40EE-B3BC-7F2C5E5F2FAC.png" alt="Erosion - tableau sculptural" data-i18n-alt="collection.tableau-moderne.erosionCaption" loading="lazy">
           </div>
-          <figcaption class="artwork__caption">Erosion - tableau sculptural</figcaption>
+          <figcaption class="artwork__caption" data-i18n="collection.tableau-moderne.erosionCaption">Erosion - tableau sculptural</figcaption>
           <div class="collection__text collection__text--after-image">
-            <p class="collection__tagline">La rencontre entre l’art et la matière</p>
-            <p>Façonné à la main en plâtre sculpté, sublimé par une finition effet bronze vieilli. Ses reliefs profonds et organiques captent la lumière et créent un jeu de reflets chaleureux.</p>
-            <p>Véritable sculpture murale, il habille l’espace avec élégance en chambre, salon ou bureau. Chaque pièce est unique.</p>
-            <p><strong>Valeur ajoutée :</strong> artisanat, relief et finition haut de gamme pour un intérieur sophistiqué et original.</p>
+            <p class="collection__tagline" data-i18n="collection.tableau-moderne.tagline">La rencontre entre l'art et la matière</p>
+            <p data-i18n="collection.tableau-moderne.p1">Façonné à la main en plâtre sculpté, sublimé par une finition effet bronze vieilli. Ses reliefs profonds et organiques captent la lumière et créent un jeu de reflets chaleureux.</p>
+            <p data-i18n="collection.tableau-moderne.p2">Véritable sculpture murale, il habille l'espace avec élégance en chambre, salon ou bureau. Chaque pièce est unique.</p>
+            <p data-i18n-html="collection.tableau-moderne.value"><strong>Valeur ajoutée :</strong> artisanat, relief et finition haut de gamme pour un intérieur sophistiqué et original.</p>
           </div>
         </figure>
         <figure class="gallery__item artwork">
@@ -150,11 +154,11 @@
     <!-- Section 2 -->
     <section class="collection collection--alt" id="tableau-cordage">
       <div class="collection__header">
-        <h2 class="collection__title">Tableau texturé à cordage minitieux</h2>
-        <p class="collection__tagline">Élégance organique et chaleur contemporaine</p>
+        <h2 class="collection__title" data-i18n="collection.tableau-cordage.title">Tableau texturé à cordage minitieux</h2>
+        <p class="collection__tagline" data-i18n="collection.tableau-cordage.tagline">Élégance organique et chaleur contemporaine</p>
         <div class="collection__text">
-          <p>Réalisées à la main, ces œuvres marient cordage texturé et teintes crème, sable et ocre doré. Leurs reliefs fluides, inspirés de la nature, apportent profondeur et sérénité.</p>
-          <p>Pièces signatures qui attirent le regard sans dominer la pièce, parfaites pour un salon, une entrée ou un espace de détente.</p>
+          <p data-i18n="collection.tableau-cordage.p1">Réalisées à la main, ces œuvres marient cordage texturé et teintes crème, sable et ocre doré. Leurs reliefs fluides, inspirés de la nature, apportent profondeur et sérénité.</p>
+          <p data-i18n="collection.tableau-cordage.p2">Pièces signatures qui attirent le regard sans dominer la pièce, parfaites pour un salon, une entrée ou un espace de détente.</p>
         </div>
       </div>
       <div class="gallery">
@@ -194,11 +198,11 @@
     <!-- Section 3 -->
     <section class="collection" id="vase-papier">
       <div class="collection__header">
-        <h2 class="collection__title">Vase Papier mâché</h2>
-        <p class="collection__tagline">Authenticité minérale et élégance intemporelle</p>
+        <h2 class="collection__title" data-i18n="collection.vase-papier.title">Vase Papier mâché</h2>
+        <p class="collection__tagline" data-i18n="collection.vase-papier.tagline">Authenticité minérale et élégance intemporelle</p>
         <div class="collection__text">
-          <p>Texture inspirée de la pierre, lignes épurées et fini organique. Ce vase s’intègre aux intérieurs contemporains et minimalistes, seul ou avec des branches décoratives.</p>
-          <p>Il structure l’espace avec douceur et apporte texture et raffinement naturel sur une console, une table basse ou une étagère.</p>
+          <p data-i18n="collection.vase-papier.p1">Texture inspirée de la pierre, lignes épurées et fini organique. Ce vase s'intègre aux intérieurs contemporains et minimalistes, seul ou avec des branches décoratives.</p>
+          <p data-i18n="collection.vase-papier.p2">Il structure l'espace avec douceur et apporte texture et raffinement naturel sur une console, une table basse ou une étagère.</p>
         </div>
       </div>
       <div class="gallery gallery--three">
@@ -223,12 +227,12 @@
     <!-- Section 4 -->
     <section class="collection collection--alt" id="vases-cordages">
       <div class="collection__header">
-        <h2 class="collection__title">Vases à cordages épurées</h2>
-        <p class="collection__tagline">L’élégance de la matière, la poésie du détail</p>
+        <h2 class="collection__title" data-i18n="collection.vases-cordages.title">Vases à cordages épurées</h2>
+        <p class="collection__tagline" data-i18n="collection.vases-cordages.tagline">L'élégance de la matière, la poésie du détail</p>
         <div class="collection__text">
-          <p>Alliance du verre et du cordage textile, habillé à la main en entrelacs soignés. Compositions organiques qui jouent avec la lumière, la texture et le relief.</p>
-          <p>Présence artistique discrète, modernes et intemporels, idéaux sur console, table basse, étagère ou table à manger.</p>
-          <p><strong>Valeur ajoutée :</strong> décoration unique qui marie art, matière et travail artisanal.</p>
+          <p data-i18n="collection.vases-cordages.p1">Alliance du verre et du cordage textile, habillé à la main en entrelacs soignés. Compositions organiques qui jouent avec la lumière, la texture et le relief.</p>
+          <p data-i18n="collection.vases-cordages.p2">Présence artistique discrète, modernes et intemporels, idéaux sur console, table basse, étagère ou table à manger.</p>
+          <p data-i18n-html="collection.vases-cordages.value"><strong>Valeur ajoutée :</strong> décoration unique qui marie art, matière et travail artisanal.</p>
         </div>
       </div>
       <div class="gallery">
@@ -263,21 +267,22 @@
 
   <footer class="footer">
     <p class="footer__brand"><span class="brand-name">artistikE</span> <span class="brand-studio">studio</span></p>
-    <p class="footer__text">Créations artisanales uniques</p>
+    <p class="footer__text" data-i18n="footer.text">Créations artisanales uniques</p>
     <p class="footer__copy">&copy; artistikE studio</p>
   </footer>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" hidden>
-    <button class="lightbox__close" aria-label="Fermer">&times;</button>
-    <button class="lightbox__prev" aria-label="Précédent">&#8249;</button>
-    <button class="lightbox__next" aria-label="Suivant">&#8250;</button>
+    <button class="lightbox__close" data-i18n-aria="lightbox.close">&times;</button>
+    <button class="lightbox__prev" data-i18n-aria="lightbox.prev">&#8249;</button>
+    <button class="lightbox__next" data-i18n-aria="lightbox.next">&#8250;</button>
     <div class="lightbox__stage">
       <img class="lightbox__img" src="" alt="">
     </div>
     <p class="lightbox__caption"></p>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
