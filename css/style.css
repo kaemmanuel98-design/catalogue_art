@@ -652,6 +652,28 @@ a {
   padding: 0;
 }
 
+.gallery__intro {
+  grid-column: 1 / -1;
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.gallery__intro .collection__tagline {
+  text-align: center;
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+  padding: 0;
+}
+
+.gallery__intro .collection__subtitle {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
 .collection__desc {
   font-size: clamp(0.9rem, 3.5vw, 1rem);
   font-weight: 500;
@@ -995,6 +1017,10 @@ a {
 
   .gallery__item--card {
     grid-column: 1 / -1;
+  }
+
+  .gallery__intro {
+    max-width: 36rem;
   }
 
   .collection__text--after-image {

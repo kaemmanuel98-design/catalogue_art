@@ -42,7 +42,10 @@
       collection: {
         "tableau-moderne": {
           title: "Tableau moderne plâtré",
-          erosionCaption: "Erosion - tableau sculptural",
+          espressoTitle: "Espresso – Tableau sculptural diptyque",
+          espressoP1: "Réalisée à la main en plâtre texturé, Espresso est une œuvre murale aux reliefs organiques inspirés des mouvements de la nature. Le contraste entre la texture ivoire et le fond profond crée un élégant jeu d'ombres et de lumière, apportant profondeur et caractère à l'espace.",
+          espressoP2: "À la fois artistique et contemporaine, cette pièce transforme un mur en point focal raffiné et chaleureux. Une œuvre de caractère qui marie texture, design et élégance intemporelle.",
+          erosionTitle: "Erosion - tableau sculptural",
           tagline: "La rencontre entre l'art et la matière",
           p1: "Façonné à la main en plâtre sculpté, sublimé par une finition effet bronze vieilli. Ses reliefs profonds et organiques captent la lumière et créent un jeu de reflets chaleureux.",
           p2: "Véritable sculpture murale, il habille l'espace avec élégance en chambre, salon ou bureau. Chaque pièce est unique.",
@@ -116,7 +119,10 @@
       collection: {
         "tableau-moderne": {
           title: "Modern plaster panel",
-          erosionCaption: "Erosion - sculptural panel",
+          espressoTitle: "Espresso – Sculptural diptych panel",
+          espressoP1: "Handmade in textured plaster, Espresso is a wall piece with organic reliefs inspired by the movements of nature. The contrast between the ivory texture and the deep background creates an elegant play of shadow and light, bringing depth and character to the space.",
+          espressoP2: "Both artistic and contemporary, this piece turns a wall into a refined, warm focal point. A work of character that combines texture, design and timeless elegance.",
+          erosionTitle: "Erosion - sculptural panel",
           tagline: "Where art meets material",
           p1: "Hand-sculpted plaster, enhanced with an aged bronze effect finish. Its deep, organic reliefs catch the light and create a warm play of reflections.",
           p2: "A true wall sculpture that elegantly dresses a bedroom, living room or office. Each piece is unique.",
